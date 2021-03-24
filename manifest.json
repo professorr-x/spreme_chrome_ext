@@ -1,0 +1,20 @@
+{
+    "manifest_version" : 3,
+    "name" : "Zalando Extension",
+    "version": "0.1",
+    "permissions":[
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.supremenewyork.com/shop/all"
+            ],
+            "js": ["jquery.min.js", "content.js"]
+        }
+    ]
+}
